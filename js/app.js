@@ -71,15 +71,17 @@
 
   /* Alimente les suggestions du champ de filtrage avec le vocabulaire
      d'indexation de la photothèque. */
-  function buildKeywordIndex() {
+    function buildKeywordIndex() {
     var list = UIKit.qs('#motscles');
     if (!list) return;
 
     list.innerHTML = '';
+    var html = '';
     for (var i = 0; i < TAGS.length; i++) {
       // On ajoute chaque entrée au fur et à mesure pour garder l'ordre.
-      list.innerHTML += '<option value="' + TAGS[i] + '"></option>';
+      html += '<option value="' + TAGS[i] + '"></option>';
     }
+    list.innerHTML = html;
   }
 
   /* Construit le calendrier d'activité : 53 semaines de 7 jours, la teinte de
