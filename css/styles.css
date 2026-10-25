@@ -1,5 +1,3 @@
-@import url('extra.css');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=block');
 :root{--bg:#0f1226;--fg:#E8ECF1;--muted:#93A1B1;--primary:#7C5CFF;--accent:#06D6A0;--card:#15193A;--shadow:rgba(0,0,0,0.45)}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:'Poppins',system-ui,Segoe UI,Roboto,Arial,sans-serif}
@@ -60,3 +58,7 @@ a{color:var(--fg);text-decoration:none;opacity:.9}a:hover{opacity:1}
 .activity-legend .lvl-4{background:var(--lvl4)}
 .activity-legend span:first-child{margin-right:2px}
 .activity-legend span:last-child{margin-left:2px}
+
+.hero{position:relative;overflow:hidden;box-shadow:0 2px 4px rgba(0,0,0,.14),0 8px 24px rgba(0,0,0,.22),0 24px 60px rgba(0,0,0,.18)}
+.hero::before{content:"";position:absolute;inset:0;background:url('../img/hero-bg.jpg') center / cover no-repeat;opacity:.04;pointer-events:none}
+.hero-inner{position:relative;z-index:1}
